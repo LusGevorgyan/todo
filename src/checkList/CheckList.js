@@ -41,6 +41,9 @@ const CheckList = ({list, todos, setTodos}) => {
           <div className='mr-[21px] '>
               <input 
                 type="checkbox" 
+                style={
+                  { backgroundColor: list.completed ? '#1E9CEA': 'none', color: list.completed ? 'white': 'black'}
+                }
                 checked={list.completed}
                 className="bg-[#FFFFFF] focus:ring-0  cursor-pointer w-[25px] h-[25px] border-[2px] border-[#1E9CEA] rounded-[5px] ml-[10px] checked:bg-[#1E9CEA]"  
                 onChange={(e)=> {
@@ -56,7 +59,7 @@ const CheckList = ({list, todos, setTodos}) => {
           key={list.id}
           className="cursor-pointer text-[24px] font-[500] leanding-[29px]"
           style={
-            {textDecoration: list.completed ? 'line-through': 'none'}
+            { textDecoration: list.completed ? 'line-through': 'none' }
           }
         > 
           {list.title}
