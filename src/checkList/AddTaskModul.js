@@ -15,13 +15,13 @@ const AddTaskModul = ({todos, setTodos}) => {
   const addText = () => {
     if(!!inputValue) {
       setTodos([ 
-        ...todos,
         {
           userId: Math.random(),
           id: Math.random(),
           title: inputValue,
           completed: false
-        }
+        },
+        ...todos
       ])
     setInputValue("")
     } 
