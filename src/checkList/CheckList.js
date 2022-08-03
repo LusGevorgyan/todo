@@ -42,7 +42,7 @@ const CheckList = ({list, todos, setTodos}) => {
               <input 
                 type="checkbox" 
                 style={
-                  { backgroundColor: list.completed ? '#1E9CEA': 'none' }
+                  { backgroundColor: list.completed ? '#1E9CEA': '#E5E5E5' }
                 }
                 checked={list.completed}
                 className="bg-[#FFFFFF] focus:ring-0  cursor-pointer w-[25px] h-[25px] border-[2px] border-[#1E9CEA] rounded-[5px] ml-[10px] checked:bg-[#1E9CEA]"  
